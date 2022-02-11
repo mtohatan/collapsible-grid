@@ -1,0 +1,4 @@
+npm i react-collapsible @progress/kendo-react-buttons @progress/kendo-react-excel-export @progress/kendo-react-inputs @progress/kendo-react-grid
+npm i @progress/kendo-licensing @progress/kendo-react-data-tools @progress/kendo-react-intl 
+npm i @progress/kendo-data-query @progress/kendo-react-animation @progress/kendo-react-dropdowns @progress/kendo-react-dateinputs
+npm i @progress/kendo-react-treeview @progress/kendo-drawing
