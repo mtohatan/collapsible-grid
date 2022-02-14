@@ -1,0 +1,36 @@
+import { FaArrowCircleDown } from "react-icons/fa";
+import { FaArrowCircleUp } from "react-icons/fa";
+
+--------------------------------------------------
+
+SetState(open: false);
+
+--------------------------------------------------
+
+
+  function ShowArrow() {
+    if (open) {
+      return <FaArrowCircleUp />;
+    } else {
+      return <FaArrowCircleDown />;
+    }
+  }
+
+------------------------------------------------------
+
+      <Button
+        onClick={() => setOpen(!open)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+      >
+        click {ShowArrow()}
+      </Button>
+      <Collapse in={open}>
+        <div id="example-collapse-text">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+          terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
+          labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </Collapse>
+
+
