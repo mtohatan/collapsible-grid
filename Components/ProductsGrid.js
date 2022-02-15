@@ -15,6 +15,8 @@ import {
   getItems,
   updateItem,
   deleteItem,
+  checkEqualWeight,
+  calculateWeight,
 } from "../Services/ProductsServices";
 
 const editField = "inEdit";
@@ -29,8 +31,20 @@ const ProductsGrid = () => {
   };
 
   const [data, setData] = React.useState([]);
+
+  //Component is loading
   React.useEffect(() => {
     let newItems = getItems();
+
+    const equalWeight = checkEqualWeight(newItems);
+    if (equalWeight && newItems.length !== 0) {
+      let newWeight = calculateWeight(newItems);
+      for (const [i, product] of newItems.entries()) {
+        //console.log("product: " + JSON.stringify(product));
+        product.Weight = newWeight;
+      }
+    }
+
     setData(newItems);
   }, []); // modify the data in the store, db etc
 
