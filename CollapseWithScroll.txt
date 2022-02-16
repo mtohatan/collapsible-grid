@@ -1,0 +1,25 @@
+import { Component } from "react"
+
+1. Create a file for styles
+ex: filename.module.css
+
+the code in file is:
+
+.collapse,
+.collapsing {
+  overflow: auto;
+  max-height: 40vh;
+  max-width: 1250px;
+}
+
+2. Import styles:
+ex: import styles from "./filename.module.css";
+
+3. add the className attribute to Collapse Component
+ex:
+
+    <Collapse in={this.state.open} className={styles.collapsing}>
+          <div id="example-collapse-text">
+            <ProductsGrid />
+          </div>
+    </Collapse>
